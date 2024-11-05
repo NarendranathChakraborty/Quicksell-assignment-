@@ -1,11 +1,8 @@
-// src/App.js
 import React, { useEffect, useState } from 'react';
 import TicketList from './components/TicketList';
-import SortingAndGroupingControls from './components/SortingAndGroupingControls';
 
 function App() {
   const [tickets, setTickets] = useState([]);
-  const [preferences, setPreferences] = useState({ groupBy: 'status', sortOrder: 'title' });
   const [error, setError] = useState(null);
 
   useEffect(() => {
@@ -16,8 +13,8 @@ function App() {
           throw new Error(`Network response was not ok: ${response.statusText}`);
         }
         const data = await response.json();
-        if (Array.isArray(data)) {
-          setTickets(data);
+        if (data.tickets && Array.isArray(data.tickets)) {
+          setTickets(data.tickets); // Accessing tickets correctly
         } else {
           setTickets([]);
         }
@@ -34,16 +31,7 @@ function App() {
       {error ? (
         <div style={{ color: 'red' }}>{error}</div>
       ) : (
-        <>
-          <SortingAndGroupingControls 
-            preferences={preferences} 
-            setPreferences={setPreferences} 
-          />
-          <TicketList 
-            tickets={tickets} 
-            preferences={preferences} 
-          />
-        </>
+        <TicketList tickets={tickets} /> // Pass tickets to TicketList
       )}
     </div>
   );
