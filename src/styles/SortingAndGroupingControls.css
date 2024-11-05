@@ -1,0 +1,62 @@
+/* src/styles/SortingAndGroupingControls.css */
+
+.controls-container {
+  display: flex;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+}
+
+.display-dropdown {
+  position: relative;
+}
+
+.dropdown-label {
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.display-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px; /* Adjust spacing between icon and text */
+}
+
+.dropdown-icon {
+  margin-left: 5px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  z-index: 1000;
+}
+
+.dropdown-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.dropdown-option label {
+  margin-right: 10px;
+}
+
+select {
+  padding: 5px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+}

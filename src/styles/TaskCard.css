@@ -1,0 +1,45 @@
+/* src/components/TaskCard.css */
+.task-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin: 10px 0;
+    position: relative;
+  }
+  
+  .task-identifier {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+  }
+  
+  .task-description {
+    margin-bottom: 10px;
+  }
+  
+  .task-label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .label-icon {
+    width: 16px; /* Adjust size as needed */
+    height: 16px; /* Adjust size as needed */
+    margin-right: 5px;
+  }
+  
+  .assignee-avatar {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+  
+  .avatar {
+    width: 30px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  

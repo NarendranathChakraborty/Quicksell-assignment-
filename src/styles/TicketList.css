@@ -1,0 +1,47 @@
+/* src/styles/TicketList.css */
+
+.kanban-board {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.kanban-column {
+  flex: 1;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.column-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.status-icon {
+  width: 20px; /* Adjust size as needed */
+  height: 20px; /* Adjust size as needed */
+  margin-right: 8px;
+}
+
+.column-actions {
+  display: flex;
+  align-items: center;
+}
+
+.action-icon {
+  width: 16px; /* Adjust size as needed */
+  height: 16px; /* Adjust size as needed */
+  margin-left: 10px; /* Space between icons */
+}
+
+.ticket-card {
+  background-color: #fff;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  font-size: 0.9em;
+}
